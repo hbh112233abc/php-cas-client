@@ -1,0 +1,22 @@
+{
+    "name": "bingher/php-cas-client",
+    "description": "php cas client from phpCAS",
+    "type": "library",
+    "require": {
+        "php": ">=5.4",
+        "jasig/phpcas": "^1.3"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "hbh112233abc",
+            "email": "hbh112233abc@163.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "bingher\\phpcas\\": "src"
+        }
+    }
+}
