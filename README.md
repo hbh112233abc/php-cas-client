@@ -4,12 +4,12 @@ php cas client,create from phpCAS
 ## composer install
 
 ```
-composer require bingher/php-cas-client
+composer require bingher/php-cas-client dev-master
 ```
 
 ## how to use at thinkphp5.1
 
-1.create config file ==config/cas.php==
+1.create config file `config/cas.php`
 ```
 <?php
 return [
@@ -22,7 +22,7 @@ return [
     'log_file'   => \Env::get('runtime_path') . '/log/' . date('Ym') . '/' . date('d') . '_cas.log',
 ];
 ```
-2.import at controller ==app\index\controller\Test.php==
+2.import at controller `app\index\controller\Test.php`
 ```
 <?php
 namespace app\index\controller;
