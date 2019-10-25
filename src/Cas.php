@@ -42,7 +42,7 @@ class Cas
             \phpCAS::setDebug('');
             \phpCAS::setVerbose(false); //是否显示错误信息
         }
-        \phpCAS::client($this->conf['cas_version'], $this->conf['host'], $this->conf['port'], $this->conf['context']); //配置客户端
+        \phpCAS::client($this->conf['cas_version'], $this->conf['host'], intval($this->conf['port']), $this->conf['context']); //配置客户端
         \phpCAS::setLang($this->conf['lang']); //支持中文
         \phpCAS::setNoCasServerValidation();
         if (is_file($this->conf['ca_cert_file'])) {
