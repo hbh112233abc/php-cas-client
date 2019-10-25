@@ -4,7 +4,7 @@ php cas client,create from phpCAS
 ## composer install
 
 ```
-composer require bingher/php-cas-client dev-master
+composer require bingher/php-cas-client
 ```
 
 ## how to use at thinkphp5.1
