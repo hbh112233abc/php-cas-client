@@ -35,11 +35,17 @@ class Cas
         }
 
         $this->conf = array_merge($this->conf, $config);
-        if ($this->conf['debug']) {
+        if (!empty($this->conf['log_file'])) {
+            $logPath = dirname($this->conf['log_file']);
+            if (!is_dir($logPath)) {
+                mkdir($logPath, '0775', true);
+            }
             \phpCAS::setDebug($this->conf['log_file']); //开启调试模式,设置日志文件路径
+        }
+
+        if ($this->conf['debug']) {
             \phpCAS::setVerbose(true); //是否显示错误信息
         } else {
-            \phpCAS::setDebug('');
             \phpCAS::setVerbose(false); //是否显示错误信息
         }
         \phpCAS::client($this->conf['cas_version'], $this->conf['host'], intval($this->conf['port']), $this->conf['context']); //配置客户端
