@@ -49,7 +49,7 @@ class Cas
         } else {
             \phpCAS::setVerbose(false); //是否显示错误信息
         }
-        $this->conf['base_uri']   = sprintf('http://%s:%d', $this->conf['host'], $this->conf['port']);
+        $this->conf['base_uri']   = $_SERVER["REQUEST_SCHEME"] . '://' . $_SERVER["SERVER_NAME"];
         $this->conf['real_hosts'] = [$this->conf['host']];
         \phpCAS::client(
             $this->conf['cas_version'],
